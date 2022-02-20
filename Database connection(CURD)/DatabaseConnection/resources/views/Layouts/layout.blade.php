@@ -10,9 +10,9 @@
 <body>
     <!-- the navbar  -->
     <div >
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="{{route('posts')}}">Posts</a>
         </div>
     </nav>
     </div>

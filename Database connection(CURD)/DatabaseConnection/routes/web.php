@@ -17,13 +17,16 @@ use App\Http\Controllers\PostsController;
 Route::get('/Posts', [PostsController::class,'index'])->name("posts");
 
 // the page to show the single post
-Route::get('/Posts/{Post}', [PostsController::class,'show'])->name("posts.show");
+Route::get('/Posts/{Post}/view', [PostsController::class,'show'])->name("posts.show");
 
 // the page to updata the post
-Route::put('/Posts/{Post}/update', [PostsController::class,'update'])->name("posts.update");
+Route::any('/Posts/{Post}/update', [PostsController::class,'update'])->name("posts.update");
 
 // the page to create the post
 Route::get('/Posts/Create', [PostsController::class,'create'])->name("posts.create");
+
+// the page to check the data and store it in the database
+Route::any('/Posts/store', [PostsController::class,'store'])->name("posts.store");
 
 // the page to edit the post
 Route::get('/Posts/{Post}/edit', [PostsController::class,'edit'])->name("posts.edit");
